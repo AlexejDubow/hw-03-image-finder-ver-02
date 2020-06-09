@@ -1,0 +1,17 @@
+ul {
+  padding: 0;
+  list-style: none;
+  width: 300px;
+  text-align: justify;
+}
+li {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+}
+button {
+  border-radius: 5px;
+}
+li>p {
+  margin: 0;
+}

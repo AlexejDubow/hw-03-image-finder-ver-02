@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.module.css"],"names":[],"mappings":"AAAA,GACE,SAAU,CACV,eAAgB,CAChB,WAAY,CACZ,kBACF,CACA,GACE,YAAa,CACb,6BAA8B,CAC9B,WACF,CAIA,KACE,QACF,CAhBA,KACE,WACF,CACA,MACE,YACF,CACA,OACE,iBACF","file":"main.19b0af54.chunk.css","sourcesContent":["form {\r\n  width: 250px;\r\n}\r\ninput {\r\n  margin: 5px 0;\r\n}\r\nbutton {\r\n  border-radius: 5px;\r\n}"]}

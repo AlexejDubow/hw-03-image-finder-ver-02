@@ -1,0 +1,9 @@
+form {
+  width: 250px;
+}
+input {
+  margin: 5px 0;
+}
+button {
+  border-radius: 5px;
+}
