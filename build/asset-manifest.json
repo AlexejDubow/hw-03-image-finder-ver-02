@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/hw-03-image-finder-ver-02/static/css/main.5f361e03.chunk.css",
+    "main.js": "/hw-03-image-finder-ver-02/static/js/main.096dd423.chunk.js",
+    "main.js.map": "/hw-03-image-finder-ver-02/static/js/main.096dd423.chunk.js.map",
+    "runtime-main.js": "/hw-03-image-finder-ver-02/static/js/runtime-main.236b45e7.js",
+    "runtime-main.js.map": "/hw-03-image-finder-ver-02/static/js/runtime-main.236b45e7.js.map",
+    "static/js/2.887cec14.chunk.js": "/hw-03-image-finder-ver-02/static/js/2.887cec14.chunk.js",
+    "static/js/2.887cec14.chunk.js.map": "/hw-03-image-finder-ver-02/static/js/2.887cec14.chunk.js.map",
+    "index.html": "/hw-03-image-finder-ver-02/index.html",
+    "precache-manifest.8e29b2c190476ed1028ba96f52fad701.js": "/hw-03-image-finder-ver-02/precache-manifest.8e29b2c190476ed1028ba96f52fad701.js",
+    "service-worker.js": "/hw-03-image-finder-ver-02/service-worker.js",
+    "static/css/main.5f361e03.chunk.css.map": "/hw-03-image-finder-ver-02/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.887cec14.chunk.js.LICENSE.txt": "/hw-03-image-finder-ver-02/static/js/2.887cec14.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/hw-03-image-finder-ver-02/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.236b45e7.js",
+    "static/js/2.887cec14.chunk.js",
+    "static/css/main.5f361e03.chunk.css",
+    "static/js/main.096dd423.chunk.js"
+  ]
+}
