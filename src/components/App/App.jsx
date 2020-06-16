@@ -18,26 +18,19 @@ export default class App extends Component {
   };
 
   componentDidMount() {
-    this.fetchImages()
-    window.addEventListener('keydown', this.handleKeyPress)
-  }
-
-  componentDidUpdate(prevProps, prevState) {
-    console.log("componentDidUpdate")
-    
-    if(prevState.query !== this.state.query){
-      imagesAPI.resetPage();
-      imagesAPI.fetchImages(this.state.query)
+    if(this.state.query) {
+      this.fetchImages()
     }
+    window.addEventListener('keydown', this.handleKeyPress)
   }
 
   componentWillUnmount() {
     window.removeEventListener('keydown', this.handleKeyPress)
   }
 
-  fetchImages = (query = "") => {
-    imagesAPI.resetPage()
-    this.setState({ isLoading: true, query, images: [] });
+  fetchImages = (query) => {
+    // imagesAPI.resetPage()
+    this.setState({ isLoading: true, query: query, images: [] });
     
     imagesAPI.fetchImages(query)
       .then(({ data }) => this.setState({ images: [...data.hits] }))
@@ -48,38 +41,40 @@ export default class App extends Component {
   }
 
   handleLoadMoreImages = () => {
-
-    imagesAPI.incrementPage();
-
     this.setState({ isLoading: true });
     imagesAPI.fetchImages(this.state.query)
       .then(({ data }) =>{
         this.setState((state) => ({ images: [...state.images, ...data.hits] }));
-        if (imagesAPI.page > 1) {this.windowScrollTo()}
+        this.windowScrollTo()
       })
       .catch((err) => console.error(err))
       .finally(() => this.setState({ isLoading: false }));
   }
+
   windowScrollTo () {
     window.scrollTo({
       top: document.documentElement.scrollHeight,
       behavior: 'smooth',
     });
   }
+
   handleModalOpen = (src) => {
     this.setState({
       modalIsOpen: true,
       largeImageURL: src,
     })
   }
+
   handleCloseModal = (e) => {
     if(e.target.className === 'Overlay') {
       this.closeModal()
     }
   }
+
   handleKeyPress = (e) => {
     if (e.code === "Escape") this.closeModal();
   };
+  
   closeModal = () => {
     this.setState({
       modalIsOpen: false,

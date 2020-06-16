@@ -11,10 +11,10 @@ export default {
     const requestParams = `&q=${query}&page=${this.page}&per_page=${this.perPage}&image_type=all&orientation=horizontal`;
     return axios.get(BASE_URL + USER_KEY + requestParams);
   },
-  incrementPage() {
-    this.page += 1;
-  },
-  resetPage() {
-    this.page = 1;
-  },
+  // incrementPage() {
+  //   this.page += 1;
+  // },
+  // resetPage() {
+  //   this.page = 1;
+  // },
 };
