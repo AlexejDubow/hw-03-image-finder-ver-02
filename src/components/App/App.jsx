@@ -29,9 +29,8 @@ export default class App extends Component {
   }
 
   fetchImages = (query) => {
-    // imagesAPI.resetPage()
     this.setState({ isLoading: true, query: query, images: [] });
-    
+    imagesAPI.resetPage()
     imagesAPI.fetchImages(query)
       .then(({ data }) => this.setState({ images: [...data.hits] }))
       .catch((error) => this.setState({ error }))
@@ -41,6 +40,7 @@ export default class App extends Component {
   }
 
   handleLoadMoreImages = () => {
+    imagesAPI.incrementPage();
     this.setState({ isLoading: true });
     imagesAPI.fetchImages(this.state.query)
       .then(({ data }) =>{
@@ -74,7 +74,7 @@ export default class App extends Component {
   handleKeyPress = (e) => {
     if (e.code === "Escape") this.closeModal();
   };
-  
+
   closeModal = () => {
     this.setState({
       modalIsOpen: false,
